@@ -81,12 +81,40 @@
       };
 
       (function() {
+
+        var users = [
+            {
+                id: 'srinidhi.rao@unvired.com',
+                name: 'Srinidhi'
+            },
+            {
+                id: 'srihari@unvired.com',
+                name: 'Srihari'
+            },
+            {
+                id: 3,
+                name: 'Aparna'
+            },
+            {
+                id: 4,
+                name: 'Praveen'
+            },
+            {
+                id: 5,
+                name: 'Srini'
+            },
+            {
+                id: 6,
+                name: 'Anup'
+            }
+        ]
+
         // Intialize Recogito
         var r = Recogito.init({
           content: 'content', // Element id or DOM node to attach to
           locale: 'auto',
       	  widgets: [
-            'COMMENT',
+            { widget: 'COMMENT', userSuggestions: users },
             { widget: 'TAG', vocabulary: [ 'Place', 'Person', 'Event', 'Organization', 'Animal' ] }
           ],
           relationVocabulary: [ 'isRelated', 'isPartOf', 'isSameAs ']
