@@ -272,7 +272,7 @@ export default class TextAnnotator extends Component {
             onAnnotationUpdated={this.onCreateOrUpdateAnnotation('onAnnotationUpdated')}
             onAnnotationDeleted={this.onDeleteAnnotation}
             onCancel={this.onCancelAnnotation}
-            userSuggestions={this.props.userSuggestions} />
+            />
         }
 
         { this.state.selectedRelation &&
